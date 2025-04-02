@@ -9,8 +9,9 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path .json(__dirname, "public")))
 app.use(cors());
+
+
 
 
 // Connect to MongoDB
@@ -31,6 +32,10 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 
+
+app.get("/", (req, res) => {
+    res.send("This is just for the test")
+})
 
 // Register Endpoint
 app.post('/register', async (req, res) => {
@@ -58,5 +63,5 @@ app.post('/login', async (req, res) => {
     res.json({ token });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`User Service running on port ${PORT}`));
