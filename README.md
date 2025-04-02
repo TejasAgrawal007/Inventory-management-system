@@ -5,7 +5,7 @@
 Clone this repository and install dependencies for each service.
 
 ```bash
-git clone https://github.com/yourusername/inventory-microservices.git
+[git clone https://github.com/yourusername/inventory-microservices.git](https://github.com/TejasAgrawal007/Inventory-management-system)
 cd inventory-microservices
 ```
 
