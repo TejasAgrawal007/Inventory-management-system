@@ -1,9 +1,5 @@
 # Microservices-Based Inventory Management System
 
-## Overview
-Welcome to the **Microservices-Based Inventory Management System**. This project is built using **Node.js, Express.js, MongoDB**, and **JWT authentication**. It follows a microservices architecture with **User Service, Inventory Service, and an API Gateway** to manage authentication and routing.
-
----
 
 ## Tech Stack
 - **Backend:** Node.js + Express.js
