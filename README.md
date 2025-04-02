@@ -5,8 +5,7 @@
 Clone this repository and install dependencies for each service.
 
 ```bash
-[Inventory-management-system
-](https://github.com/TejasAgrawal007/Inventory-management-system)
+https://github.com/TejasAgrawal007/Inventory-management-system
 cd inventory-microservices
 ```
 
