@@ -145,14 +145,7 @@ Value: Bearer your_generated_jwt_token
   { "message": "Access Forbidden" }
   ```
 
----
-
-## Future Improvements
-- Dockerize services for better deployment
-- Implement Kafka or RabbitMQ for better communication between services
-- Add more security layers for authentication
-
----
+ 
 
 ## Created By
 **Tejas Agrawal**
