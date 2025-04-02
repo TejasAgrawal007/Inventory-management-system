@@ -1,19 +1,54 @@
 # Microservices-Based Inventory Management System
 
-## User Service
-Handles authentication and user management.
+## Overview
+Welcome to the **Microservices-Based Inventory Management System**. This project is built using **Node.js, Express.js, MongoDB**, and **JWT authentication**. It follows a microservices architecture with **User Service, Inventory Service, and an API Gateway** to manage authentication and routing.
 
-### Installation
+---
+
+## Tech Stack
+- **Backend:** Node.js + Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT (JSON Web Tokens)
+- **API Gateway:** Express + http-proxy-middleware
+- **Authorization:** Role-Based Access Control (RBAC) for **ADMIN** and **USER**
+
+---
+
+## Installation & Setup
+Clone this repository and install dependencies for each service.
+
+```bash
+git clone https://github.com/yourusername/inventory-microservices.git
+cd inventory-microservices
+```
+
+### User Service
 ```bash
 cd user-service
 npm install
 node index.js
 ```
 
-### Endpoints
+### Inventory Service
+```bash
+cd inventory-service
+npm install
+node index.js
+```
 
-#### 1️⃣ Register a User
-**POST** `/register`
+### API Gateway
+```bash
+cd api-gateway
+npm install
+node index.js
+```
+
+---
+
+## User Service Endpoints
+
+### Register a User
+**POST** `/auth/register`
 - **Body:**
   ```json
   {
@@ -27,8 +62,8 @@ node index.js
   { "message": "User registered successfully" }
   ```
 
-#### 2️⃣ Login to Get JWT Token
-**POST** `/login`
+### Login to Get JWT Token
+**POST** `/auth/login`
 - **Body:**
   ```json
   {
@@ -43,26 +78,15 @@ node index.js
 
 ---
 
-## Inventory Service
-Handles inventory CRUD operations.
+## Inventory Service Endpoints
 
-### Installation
-```bash
-cd inventory-service
-npm install
-node index.js
-```
-
-### Authentication
-For all inventory requests, add the following **Header** in Postman:
+**Note:** For all inventory requests, add the following **Header** in Postman:
 ```
 Key: Authorization
 Value: Bearer your_generated_jwt_token
 ```
 
-### Endpoints
-
-#### 1️⃣ Create a Product (Admin Only)
+### Create a Product (Admin Only)
 **POST** `/product`
 - **Body:**
   ```json
@@ -82,7 +106,7 @@ Value: Bearer your_generated_jwt_token
   }
   ```
 
-#### 2️⃣ Get All Products (Admin & User)
+### Get All Products (Admin & User)
 **GET** `/product`
 - **Response:**
   ```json
@@ -96,7 +120,7 @@ Value: Bearer your_generated_jwt_token
   ]
   ```
 
-#### 3️⃣ Update a Product (Admin Only)
+### Update a Product (Admin Only)
 **PUT** `/product/{product_id}`
 - **Body:**
   ```json
@@ -106,11 +130,11 @@ Value: Bearer your_generated_jwt_token
   ```
 - **Response:** `{ "message": "Product updated successfully" }`
 
-#### 4️⃣ Delete a Product (Admin Only)
+### Delete a Product (Admin Only)
 **DELETE** `/product/{product_id}`
 - **Response:** `{ "message": "Product deleted" }`
 
-#### 5️⃣ Get a Product by ID (Admin & User)
+### Get a Product by ID (Admin & User)
 **GET** `/product/{product_id}`
 - **Response:**
   ```json
@@ -135,4 +159,14 @@ Value: Bearer your_generated_jwt_token
   ```
 
 ---
+
+## Future Improvements
+- Dockerize services for better deployment
+- Implement Kafka or RabbitMQ for better communication between services
+- Add more security layers for authentication
+
+---
+
+## Created By
+**Tejas Agrawal**
 
