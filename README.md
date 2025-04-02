@@ -1,15 +1,6 @@
 # Microservices-Based Inventory Management System
 
 
-## Tech Stack
-- **Backend:** Node.js + Express.js
-- **Database:** MongoDB
-- **Authentication:** JWT (JSON Web Tokens)
-- **API Gateway:** Express + http-proxy-middleware
-- **Authorization:** Role-Based Access Control (RBAC) for **ADMIN** and **USER**
-
----
-
 ## Installation & Setup
 Clone this repository and install dependencies for each service.
 
